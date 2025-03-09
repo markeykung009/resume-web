@@ -65,6 +65,9 @@ const resources = {
         skill: {
           header: "My Skills",
         },
+        certificate: {
+          header: data.eng.certificate.header,      
+        }
       },
     },
   },
@@ -128,6 +131,9 @@ const resources = {
         skill: {
           header: "ความสามารถสกิลของฉัน",
         },
+        certificate: {
+          header: data.th.certificate.header,
+        }
       },
     },
   },

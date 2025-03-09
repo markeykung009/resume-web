@@ -10,6 +10,7 @@ const Homepage = () => {
   const dark = useSelector((state) => state.darkmode.darkmode);
 
   const [animation, setAnimation] = useState(false);
+  
 
   useEffect(() => {
     setAnimation(true);
@@ -41,14 +42,14 @@ const Homepage = () => {
               <h2
                 className={`font-bold ${
                   dark ? "text-white" : "text-theme_dark_2"
-                } text-3xl sm:text-5xl lg:text-3xl`}
+                } text-xl sm:text-5xl lg:text-3xl`}
               >
                 {t("data.home.hi_des")}
               </h2>
               <h1
                 className={`font-bold ${
                   dark ? "text-white" : "text-theme_dark_2"
-                } lg:text-7xl text-3xl sm:text-5xl`}
+                } lg:text-7xl text-xl sm:text-5xl`}
               >
                 {t("data.home.name")}
               </h1>
@@ -56,7 +57,7 @@ const Homepage = () => {
             <p
               className={`my-5 ${
                 dark ? "text-white" : "text-theme_dark_2"
-              } lg:mx-0 mx-2`}
+              } lg:mx-0 mx-auto max-w-[850px]`}
             >
               {t("data.home.des")}
             </p>

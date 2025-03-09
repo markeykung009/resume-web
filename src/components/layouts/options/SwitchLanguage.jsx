@@ -1,18 +1,18 @@
 /* eslint-disable react/prop-types */
 
-const SwitchLanguage = ({ i18n, dark }) => {
+const SwitchLanguage = ({ i18n, dark, switchNavbar }) => {
   const toggleLanguageThai = () => {
     localStorage.setItem("language", "th");
     const language = localStorage.getItem("language");
-
     i18n.changeLanguage(language);
+    switchNavbar()
   };
 
   const toggleLanguageEnglish = () => {
     localStorage.setItem("language", "en");
     const language = localStorage.getItem("language");
-
     i18n.changeLanguage(language);
+    switchNavbar()
   };
 
   return (

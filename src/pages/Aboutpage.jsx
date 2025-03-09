@@ -20,29 +20,29 @@ const Aboutpage = () => {
         dark
           ? "bg-gradient-to-b from-theme_dark_1 to-theme_dark_2"
           : "bg-gradient-to-b from-theme_light_1 to-theme_light_2"
-      } h-[90vh] flex flex-col items-center justify-center`}
+      } h-[90vh]  flex flex-col items-center justify-center`}
     >
-      <div className="container flex gap-2 justify-center items-center">
+      <div className="container flex gap-2 justify-center items-center lg:flex-row flex-col-reverse">
         <div
-          className={`flex flex-col gap-4 w-2/4 ${
+          className={`flex flex-col gap-4 lg:w-2/4 w-full ${
             dark ? "text-theme_light_1" : "text-theme_dark_2"
           } ${
             animation ? "opacity-100" : "opacity-0 -translate-x-96"
           } duration-[2000ms]`}
         >
-          <h1 className={`font-bold text-5xl `}>{t("data.about.section")}</h1>
-          <p className="w-3/4  text-3xl">{t("data.about.text")}</p>
+          <h1 className={`font-bold sm:text-5xl text-xl lg:mx-0 mx-auto `}>{t("data.about.section")}</h1>
+          <p className="w-3/4  sm:text-3xl text-lg lg:mx-0 mx-auto">{t("data.about.text")}</p>
         </div>
         <div className="flex flex-col items-center gap-4">
           <img
             src={data.eng.about.image}
-            className={`rounded-full w-96 duration-[2000ms] ${
+            className={`rounded-full lg:w-96 w-40 sm:w-60   duration-[2000ms] ${
               animation ? "" : "opacity-0  flip "
             } `}
             alt=""
           />
           <a
-            href="https://drive.google.com/file/d/1axdXJXtf4acKJ-Q_iQSBQNRoTlPTwJ_R/view?usp=sharing.pdf"
+            href="https://drive.google.com/file/d/1PFMxhyxS1YSzrrYXC48Yn9YSo2apcfJC/view"
             target="_blank"
             rel="noreferrer"
             className={`duration-[2000ms] ${

@@ -2,7 +2,7 @@ import { Switch } from "@headlessui/react";
 import { useSelector, useDispatch } from "react-redux";
 import { switchDarkmode } from "../../../features/darkmodeSlice";
 
-const SwitchTheme = () => {
+const SwitchTheme = ({switchNavbar}) => {
   const darkmode = useSelector((state) => state.darkmode.darkmode);
   const dispatch = useDispatch();
 
@@ -11,6 +11,7 @@ const SwitchTheme = () => {
       <Switch
         checked={darkmode}
         onChange={() => dispatch(switchDarkmode())}
+        onClick={switchNavbar}
         className={`${
           darkmode ? "bg-blue-600" : "bg-gray-200"
         } relative inline-flex h-6 w-11 items-center rounded-full`}

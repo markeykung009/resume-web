@@ -32,7 +32,7 @@ const router = createBrowserRouter([
         element: <Skillpage />,
       },
       {
-        path: "/portfolio",
+        path: "/certificate",
         element: <Portfoliopage />,
       },
       {

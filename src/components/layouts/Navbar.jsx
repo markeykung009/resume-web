@@ -106,6 +106,7 @@ const Navbar = () => {
                   } hover:border-b-2  ${dark ? "border-black" : ""} ${
                     location.pathname === el.path ? "border-b-2" : ""
                   } w-full `}
+                  onClick={switchNavbar}
                 >
                   <div className="flex gap-2 items-center">
                     <IconComponents className={`text-2xl `} />
@@ -116,8 +117,12 @@ const Navbar = () => {
             );
           })}
           <div className="flex gap-10 items-center flex-row-reverse justify-center w-full text-xl">
-            <SwitchTheme />
-            <SwitchLanguage i18n={i18n} dark={dark} />
+            <SwitchTheme switchNavbar={switchNavbar} />
+            <SwitchLanguage
+              i18n={i18n}
+              dark={dark}
+              switchNavbar={switchNavbar}
+            />
           </div>
         </ul>
       </div>

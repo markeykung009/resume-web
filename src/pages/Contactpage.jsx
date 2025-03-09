@@ -149,7 +149,7 @@ const Contactpage = () => {
           <p
             className={` ${
               dark ? "text-white" : "text-theme_dark_2"
-            } w-[500px] my-5 duration-1000 ${
+            } sm:w-[500px] w-[250px] sm:text-start text-center  my-5 duration-1000 ${
               animation ? "" : "opacity-0 scale-0"
             }`}
           >
@@ -161,7 +161,7 @@ const Contactpage = () => {
                 animation ? "" : "flip opacity-0"
               } ${dark ? "shadow-gray-800" : "shadow-gray-400"} `}
             >
-              <div className="flex items-center gap-2">
+              <div className="flex items-center gap-2 sm:flex-row flex-col">
                 <div className="flex flex-col">
                   <input
                     className={`${
