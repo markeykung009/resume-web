@@ -4,7 +4,7 @@ import { useTranslation } from "react-i18next";
 import { data } from "../data";
 import { useSelector } from "react-redux";
 import { useState, useEffect } from "react";
-import AlertModal from "../components/layouts/alertModal.jsx";
+import AlertModal from "../components/layouts/AlertModal";
 
 
 const Contactpage = () => {
