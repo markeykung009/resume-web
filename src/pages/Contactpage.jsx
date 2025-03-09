@@ -5,7 +5,7 @@ import { data } from "../data";
 import { useSelector } from "react-redux";
 import { useState, useEffect } from "react";
 import AlertModal from "../components/layouts/alertModal";
-import { use } from "i18next";
+
 
 const Contactpage = () => {
   const { t } = useTranslation();
