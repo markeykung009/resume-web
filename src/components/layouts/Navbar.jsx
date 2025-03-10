@@ -6,6 +6,7 @@ import { data } from "../../data";
 import { useTranslation } from "react-i18next";
 import { useEffect, useState } from "react";
 import { FaBars, FaXmark } from "react-icons/fa6";
+import logoIcon from "../../assets/logos/mark-logo-2-removebg.png";
 
 const Navbar = () => {
   const location = useLocation();
@@ -32,13 +33,17 @@ const Navbar = () => {
       } py-6 flex flex-col sm:items-center  `}
     >
       <div className="sm:flex sm:flex-col lg:flex-row justify-between items-center container hidden">
-        <h1
-          className={`${
-            dark ? "text-theme_dark_2" : "text-white"
-          } text-3xl font-bold sm:mx-0 mx-4`}
-        >
-          {t("data.header_text")}
-        </h1>
+        <div className="flex gap-4 items-center">
+          <img src={logoIcon} alt="logo" className="w-20" />
+
+          <h1
+            className={`${
+              dark ? "text-theme_dark_2" : "text-white"
+            } text-3xl font-bold sm:mx-0 mx-4`}
+          >
+            {t("data.header_text")}
+          </h1>
+        </div>
         <div>
           <ul className="flex items-center gap-10  w-full ">
             {data.eng.header.menu.map((el, idx) => (
@@ -64,13 +69,16 @@ const Navbar = () => {
         </div>
       </div>
       <div className="flex justify-between items-center container sm:hidden">
-        <h1
-          className={`${
-            dark ? "text-theme_dark_2" : "text-white"
-          } text-3xl font-bold sm:mx-0 mx-4`}
-        >
-          {t("data.header_text")}
-        </h1>
+        <div className="flex gep-4 items-center">
+          <img src={logoIcon} alt="logo" className="w-14" />
+          <h1
+            className={`${
+              dark ? "text-theme_dark_2" : "text-white"
+            } text-3xl font-bold sm:mx-0 mx-4`}
+          >
+            {t("data.header_text")}
+          </h1>
+        </div>
         <div className={`${dark ? "text-theme_dark_2" : "text-white"}`}>
           {openNavber ? (
             <FaXmark className="text-3xl mx-4" onClick={switchNavbar} />

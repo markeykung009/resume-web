@@ -5,7 +5,7 @@ import { AiOutlineArrowLeft, AiOutlineArrowRight } from "react-icons/ai";
 import { useTranslation } from "react-i18next";
 import i18n from "../i18n";
 
-const ImageSlider = () => {
+const ImageSlider = ({animation}) => {
   const [current, setCurrent] = useState(0);
   const [touchStartX, setTouchStartX] = useState(null);
   const [touchEndX, setTouchEndX] = useState(null);
@@ -48,13 +48,17 @@ const ImageSlider = () => {
       <AiOutlineArrowLeft
         className={`absolute top-1/2 lg:left-[-50px] lg:text-5xl text-lg z-10 cursor-pointer ${
           dark ? "text-theme_light_1" : "text-theme_dark_2"
-        } hidden lg:block`}
+        } duration-1000 ${
+              animation ? "" : "opacity-0 -translate-x-10"
+            } hidden lg:block`}
         onClick={prevSlide}
       />
       <AiOutlineArrowRight
         className={`absolute top-1/2 lg:right-[-50px] lg:text-5xl text-lg z-10 cursor-pointer ${
           dark ? "text-theme_light_1" : "text-theme_dark_2"
-        } hidden lg:block`}
+        } duration-1000 ${
+              animation ? "" : "opacity-0 translate-x-10"
+            } hidden lg:block`}
         onClick={nextSlide}
       />
       {/* แสดงรูปภาพ */}
@@ -72,13 +76,17 @@ const ImageSlider = () => {
               <img
                 src={el.image}
                 alt={el.title}
-                className="lg:w-[800px] lg:h-[600px] w-[370px] h-[170px] sm:w-[600px] sm:h-[400px] rounded-[10px]"
+                className={`lg:w-[800px] lg:h-[600px] w-[370px] h-[170px] sm:w-[600px] sm:h-[400px] rounded-[10px]  ${
+              animation ? "scale-100" : "rotate-180 scale-0"
+            } duration-[2000ms]`}
               />
               <div className="my-2 flex justify-center">
                 <p
                   className={`${
                     dark ? "text-theme_light_1" : "text-theme_dark_2"
-                  } lg:text-xl text-md sm:text-lg`}
+                  } duration-1000 ${
+              animation ? "" : "opacity-0 translate-y-10"
+            } lg:text-xl text-md sm:text-lg`}
                 >
                   {el.title[i18n.language]}
                 </p>

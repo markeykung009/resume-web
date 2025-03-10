@@ -7,6 +7,12 @@ import ImageSlider from "../components/ImageSlider";
 const Portfoliopage = () => {
   const { t } = useTranslation();
   const dark = useSelector((state) => state.darkmode.darkmode);
+  const [animation, setAnimation] = useState(false);
+
+  useEffect(() => {
+    setAnimation(true);
+  }, []);
+  
   return (
     <div
     className={`${
@@ -18,11 +24,13 @@ const Portfoliopage = () => {
       <h1
           className={`${
             dark ? "text-theme_light_1" : "text-theme_dark_2"
-          }  text-4xl my-5`}
+          } duration-1000 ${
+              animation ? "" : "opacity-0 -translate-y-10"
+            }  text-4xl my-5`}
         >
           {t("data.certificate.header")}
         </h1>
-        <ImageSlider />
+        <ImageSlider animation={animation} />
   </div>
   )
 }

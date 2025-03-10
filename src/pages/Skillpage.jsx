@@ -33,7 +33,9 @@ const Skillpage = () => {
         <h1
           className={`${
             dark ? "text-theme_light_1" : "text-theme_dark_2"
-          }  text-4xl my-5`}
+          } ${
+            animation ? "" : "opacity-0 -translate-y-10"
+          }  text-4xl my-5  duration-[2000ms]`}
         >
           {t("data.skill.header")}
         </h1>
