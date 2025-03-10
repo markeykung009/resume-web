@@ -36,7 +36,7 @@ const Aboutpage = () => {
         <div className="flex flex-col items-center gap-4">
           <img
             src={data.eng.about.image}
-            className={`rounded-full lg:w-96 w-40 sm:w-60   duration-[2000ms] ${
+            className={`rounded-full lg:w-96 w-40 sm:w-60   duration-[2000ms] sm:pt-0 pt-4 ${
               animation ? "" : "opacity-0  flip "
             } `}
             alt=""
