@@ -20,7 +20,7 @@ const Aboutpage = () => {
         dark
           ? "bg-gradient-to-b from-theme_dark_1 to-theme_dark_2"
           : "bg-gradient-to-b from-theme_light_1 to-theme_light_2"
-      } sm:h-[90vh]   flex flex-col items-center sm:justify-center justify-start`}
+      } sm:h-[90vh] h-[120vh]   flex flex-col items-center sm:justify-center justify-start`}
     >
       <div className="container flex gap-2 justify-center items-center lg:flex-row flex-col-reverse">
         <div
