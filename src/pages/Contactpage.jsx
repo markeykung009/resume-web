@@ -134,7 +134,7 @@ const Contactpage = () => {
         dark
           ? "bg-gradient-to-b from-theme_dark_1 to-theme_dark_2"
           : "bg-gradient-to-b from-theme_light_1 to-theme_light_2"
-      } h-[90vh] flex flex-col items-center sm:justify-center ${isFocused ? "justify-start" : "sm:justify-center"}`}
+      } h-[90vh] flex flex-col items-center justify-center ${isFocused ? "h-[120vh]" : "h-[90vh]"}`}
     >
       <div className="container">
         <div className="flex flex-col justify-center items-center ">
