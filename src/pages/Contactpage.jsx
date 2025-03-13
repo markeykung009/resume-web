@@ -143,7 +143,7 @@ const Contactpage = () => {
               dark ? "text-theme_light_1" : "text-theme_dark_2"
             }  sm:text-6xl text-3xl duration-1000 ${
               animation ? "" : "opacity-0 -translate-y-10"
-            } ${isFocused ? "hidden" : ""}`}
+            } ${isFocused ? "hidden sm:block" : ""}`}
           >
             {t("data.contact.header_text")}
           </h1>
@@ -152,7 +152,7 @@ const Contactpage = () => {
               dark ? "text-white" : "text-theme_dark_2"
             } sm:w-[500px] w-[250px] sm:text-start text-center  my-5 duration-1000 ${
               animation ? "" : "opacity-0 scale-0"
-            } line-clamp-4 ${isFocused ? "hidden" : ""}`}
+            } line-clamp-4 ${isFocused ? "hidden sm:block" : ""}`}
           >
             {t("data.contact.desciption")}
           </p>
