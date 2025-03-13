@@ -21,6 +21,7 @@ const Contactpage = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [checkStatus, setCheckStatus] = useState(true);
   const [animation, setAnimation] = useState(false);
+  const [isFocused, setIsFocused] = useState(false);
 
   const closeModal = () => {
     setIsOpen(false);
@@ -151,7 +152,7 @@ const Contactpage = () => {
               dark ? "text-white" : "text-theme_dark_2"
             } sm:w-[500px] w-[250px] sm:text-start text-center  my-5 duration-1000 ${
               animation ? "" : "opacity-0 scale-0"
-            } line-clamp-4`}
+            } line-clamp-4 ${isFocused ? "hidden" : ""}`}
           >
             {t("data.contact.desciption")}
           </p>
@@ -175,6 +176,8 @@ const Contactpage = () => {
                     onInput={() => validateInput("name")}
                     name={data.eng.contact.input.name_input.name}
                     placeholder={t("data.contact.input.name_input.placeholder")}
+                    onFocus={() => setIsFocused(true)}
+                    onBlur={() => setIsFocused(false)}
                     // required
                   />
                   {isValidName ? (
@@ -198,6 +201,8 @@ const Contactpage = () => {
                     onInput={() => validateInput("email")}
                     name={data.eng.contact.input.email_from.name}
                     placeholder={t("data.contact.input.email_from.placeholder")}
+                    onFocus={() => setIsFocused(true)}
+                    onBlur={() => setIsFocused(false)}
                     // required
                   />
                   {isValidEmail ? (
@@ -232,6 +237,8 @@ const Contactpage = () => {
                   placeholder={t(
                     "data.contact.input.subject_input.placeholder"
                   )}
+                  onFocus={() => setIsFocused(true)}
+                  onBlur={() => setIsFocused(false)}
                   // required
                 />
                 {isValidSubject ? (
@@ -256,6 +263,8 @@ const Contactpage = () => {
                   placeholder={t(
                     "data.contact.input.message_input.placeholder"
                   )}
+                  onFocus={() => setIsFocused(true)}
+                  onBlur={() => setIsFocused(false)}
                   // required
                 />
                 {isValidMessage ? (
