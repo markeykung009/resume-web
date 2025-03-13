@@ -134,7 +134,7 @@ const Contactpage = () => {
         dark
           ? "bg-gradient-to-b from-theme_dark_1 to-theme_dark_2"
           : "bg-gradient-to-b from-theme_light_1 to-theme_light_2"
-      } h-[90vh] flex flex-col items-center justify-center`}
+      } h-[90vh] flex flex-col items-center sm:justify-center ${isFocused ? "justify-start" : "sm:justify-center"}`}
     >
       <div className="container">
         <div className="flex flex-col justify-center items-center ">
@@ -143,7 +143,7 @@ const Contactpage = () => {
               dark ? "text-theme_light_1" : "text-theme_dark_2"
             }  sm:text-6xl text-3xl duration-1000 ${
               animation ? "" : "opacity-0 -translate-y-10"
-            }`}
+            } ${isFocused ? "hidden" : ""}`}
           >
             {t("data.contact.header_text")}
           </h1>
